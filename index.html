@@ -86,37 +86,44 @@
     }
 
     /* About section */
-    .about {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .about .photo {
-      flex: 2;
-      margin-bottom: 1rem;
-    }
-    .about .photo img {
-      border-radius: 0;
-      width: 185px;
-      height: 185px;
-      object-fit: cover;
-      display: block;
-      margin: 0 auto;
-    }
-    .about .bio {
-      flex: 8;
-      text-align: justify;
-      max-width: 600px;
-    }
+	.about {
+	  display: flex;
+	  align-items: center;
+	  gap: 15px;
+	}
 
-    .about {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: 1px;
-      padding-left: 1px;
-      padding-right: 1px;
-    }
+	.about .photo {
+	  flex: 0 0 auto;
+	}
+
+	.about .photo img {
+	  border-radius: 0;
+	  width: 240px;
+	  height: 240px;
+	  object-fit: cover;
+	  display: block;
+	}
+
+	.about .bio {
+	  flex: 1;
+	  text-align: justify;
+	}
+
+	@media (max-width: 768px) {
+	  .about {
+	    flex-direction: column;
+	    align-items: center;
+	  }
+
+	  .about .photo img {
+	    width: 70%;
+	    height: auto;
+	  }
+
+	  .about .bio {
+	    max-width: 90%;
+	  }
+	}
 
     /* Lists with square bullets */
     li {
@@ -191,14 +198,38 @@
         margin-bottom: 10px;
       }
     }
+
+	.header-container {
+  		display: flex;
+  		justify-content: space-between;
+  		align-items: center;
+  		flex-wrap: wrap;
+  		padding: 10px 0;
+	}
+	.nav-links a {
+  		margin-left: 20px;
+  		text-decoration: none;
+	  }
+	@media (max-width: 768px) {
+  	  .header-container {
+ 		flex-direction: column;
+    	text-align: center;
+  	  }
+  	  .nav-links {
+    	margin-top: 8px;
+  	  }
+  	  .nav-links a {
+    	margin: 5px 10px;
+  	  }
+	}
   </style>
 </head>
 
 <body>
   <header>
-    <nav>
-      <div><strong>Yun-Tian (Levi) Zhang</strong></div>
-      <div>
+    <nav class="header-container">
+      <div class="site-title"><strong>Yun-Tian (Levi) Zhang</strong></div>
+      <div class="nav-links">
         <a href="#about">Bio</a>
         <a href="#research">Research</a>
         <a href="#services">Services</a>
