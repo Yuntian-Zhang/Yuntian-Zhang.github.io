@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yun-Tian (Levi) Zhang</title>
+  <style>
+    /* Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      background-color: #fdfdfd;
+      color: #1a1a1a;
+      line-height: 1.6;
+      font-size: 17px;
+      padding-top: 80px;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #ffffffcc;
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #e0e0e0;
+      z-index: 1000;
+    }
+
+    nav {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem clamp(1rem, 5%, 3rem);
+      box-sizing: border-box;
+    }
+    
+    nav a {
+      text-decoration: none;
+      color: #1a1a1a;
+      margin-left: 1.5rem;
+      font-size: 0.95rem;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #555;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 4rem 1rem 2.5rem;
+    }
+
+    .hero h1 {
+      font-family: "Georgia", "Times New Roman", Times, serif;
+      font-size: 2.6rem;
+      margin-bottom: 0.4rem;
+      font-weight: 600;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #555;
+    }
+
+    .section {
+      max-width: 1100px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+    }
+
+    .section h2 {
+      font-family: "Georgia", "Times New Roman", Times, serif;
+      font-weight: 600;
+      font-size: 1.55rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #bbb;
+      padding-bottom: 0.3rem;
+      letter-spacing: 0.04em;
+      color: #3a3a3a;
+    }
+
+    /* About section */
+	.about {
+	  display: flex;
+	  align-items: center;
+	  gap: 15px;
+	}
+
+	.about .photo {
+	  flex: 0 0 auto;
+	}
+
+	.about .photo img {
+	  border-radius: 0;
+	  width: 240px;
+	  height: 240px;
+	  object-fit: cover;
+	  display: block;
+	}
+
+	.about .bio {
+	  flex: 1;
+	  text-align: justify;
+	}
+
+	@media (max-width: 768px) {
+	  .about {
+	    flex-direction: column;
+	    align-items: center;
+	  }
+
+	  .about .photo img {
+	    width: 200px;
+	    height: 200px;
+	    border-radius: 0;
+	    margin: 0 auto;
+	    display: block;
+  	  }
+
+	  .about .bio {
+	    text-align: justify;
+	    padding: 0 10px;
+	    max-width: 100%;
+  	  }
+	}
+
+    /* Lists with square bullets */
+    li {
+		list-style-type: square;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem 1rem;
+      color: #aaa;
+      font-size: 0.85rem;
+    }
+
+    /* Responsive */
+    @media (min-width: 768px) {
+      .about {
+        flex-direction: row;
+        align-items: flex-start;
+      }
+      .about .photo {
+        margin-bottom: 0;
+        margin-right: 1.5rem;
+      }
+      .about .bio {
+        max-width: none;
+      }
+    }
+
+    a {
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    a,
+	a:visited,
+	a:hover,
+	a:active {
+	  color: #4a2f91;
+	}
+
+    section p, section ul {
+      margin-top: .5em;
+      margin-bottom: 1em;
+      line-height: 2.;
+    }
+	
+	@media (max-width: 768px) {
+      body {
+	    font-size: 14px;
+      }
+      main {
+        padding: 10px;
+      }
+      h1 {
+        font-size: 1.8rem;
+      }
+      h2 {
+        font-size: 1.4rem;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      .about-me-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: justify;
+      }
+      .about-me-container img {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+    }
+
+	.header-container {
+  		display: flex;
+  		justify-content: space-between;
+  		align-items: center;
+  		flex-wrap: wrap;
+  		padding: 10px 0;
+	}
+	.nav-links a {
+  		margin-left: 20px;
+  		text-decoration: none;
+	}
+	
+	@media (max-width: 768px) {
+  	  .header-container {
+ 		flex-direction: column;
+    	text-align: center;
+  	  }
+  	  .nav-links {
+    	margin-top: 8px;
+  	  }
+  	  .nav-links a {
+    	margin: 5px 10px;
+  	  }
+	}
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="header-container">
+      <div class="site-title"><strong>Yun-Tian (Levi) Zhang</strong></div>
+      <div class="nav-links">
+        <a href="#about">Bio</a>
+        <a href="#research">Research</a>
+        <a href="#services">Services</a>
+        <a href="#miscellaneous">Misc</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Yun-Tian (Levi) Zhang</h1>
+      <p>“Music is flowing geometry <span style="font-size: 20px;">&#127931</span> Mathematics is a silent melody.”</p>
+    </section>
+
+    <section id="about" class="section">
+      <h2>Short Bio</h2>
+      <div class="about">
+        <div class="photo">
+          <img src="Roma_Colosseo.jpg" alt="alt"/>
+        </div>
+        <div class="bio">
+          <p style="text-align: justify;">I am currently a Ph.D. candidate in the School of Automation and also with the National Key Lab of Autonomous Intelligent Unmanned Systems, <a href="https://www.bit.edu.cn/"><b>Beijing Institute of Technology</b></a> (BIT), Beijing, China. I am a Visiting Ph.D. Student in the Department of Computer, Control and Management Engineering “Antonio Ruberti” (DIAG) at <a href="https://www.uniroma1.it/it"><b>Sapienza University of Rome</b></a>, Roma, Italy from 2025 to 2026. I received the B.Eng. degree with honors in Automation from BIT in 2021. I was a Visiting Student in the Department of Electrical & Computer Engineering at <a href="http://www.washington.edu/"><b>University of Washington</b></a>, Seattle, USA, in 2019. </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="research" class="section">
+      <h2>Research</h2>
+      <p style="text-align: justify;">&#x2728 In the broadest sense, I do research regarding how to bridge Operations Research (OR) and Machine Learning (ML) together for solving complex Real-World Systems under Uncertainty. My expertise lies in</p>
+        <li>Reformulation and Decomposition of Integer Programming</li>
+        <li>Prescriptive Analytics with Limited Data</li>
+        <li>Real-World Applications in Location and Covering, Spatial Analysis and Optimization, Routing, etc.</li>
+      <p style="text-align: justify;">I have more than 10 papers published or in progress in principal Journals such as INFORMS Journal on Computing (<font color='#4a2f91'><b>UTD 24</b></font>), IEEE/ACM Transactions on Networking (<font color='#4a2f91'><b>CCF A</b></font>), IEEE Transactions on Intelligent Transportation Systems and Conferences including IEEE CDC, ACM SIGSPATIAL, ACM SIGEVO GECCO. I have also applied or been issued more than 10 national invention patents in China or USA.</p>
+      <p>&#127752<b> With my collaborators, I am currently engaged in OR4ML, OR4Science on Next-generation computing systems.</b></p>
+    </section>
+
+    <section id="services" class="section">
+      <h2>Editorial Services</h2>
+      <p style="text-align: justify;"><b>Reviewer for Journals:</b> INFORMS Journal on Computing (<font color='#4a2f91'><b>UTD 24</b></font>), IEEE Systems Journal, Journal of Parallel and Distributed Computing (<font color='#4a2f91'><b>CCF B</b></font>), IEEE Transactions on Signal and Information Processing over Networks, Springer EURASIP Journal on Wireless Communications and Networking, Springer Telecommunication Systems</p>
+      <p style="text-align: justify;"><b>Reviewer for Conferences:</b> IEEE International Symposium on Parallel and Distributed Processing with Applications (ISPA) 2024, 2025, International Conference on Knowledge Science, Engineering and Management (KSEM) 2023, 2024, Asian Control Conference (ASCC) 2024, China Automation Congress (CAC) 2023</p>
+      <p style="text-align: justify;"><b>Section Editor-in-Chief:</b> Since 2023, I serve as the Editor-in-Chief of Transportation & Logistics Section in the largest Operations Research communities<font color='#4a2f91'><b>『运筹OR帷幄』</b></font>in China. We are currently having more than 800,000 subscribers. Looking forward to exploring ideas together with friends from industry and academia: <a href="https://mp.weixin.qq.com/s/7iH0y7sBar9A-78R0hlWJA"><font color='#4a2f91'><b>Join us</b></a>！</font></p>
+    </section>
+
+    <section id="miscellaneous" class="section">
+      <h2>Miscellaneous</h2>
+      <p style="text-align: justify;">&#127931 I am an amateur violinist who has passed the Central Conservatory of Music Violin Grading Level 9 and the Shanghai Conservatory of Music Violin Grading Level 10 (both are the highest level for amateurs).</p>
+      <p style="text-align: justify;">I serve as the Concertmaster of BIT Student Symphony Orchestra (Founded in 2000) during 2022-2023, and the Head of it during 2019-2020. I have led or participated in over 30 national, provincial, or university-level music performances, with countless audience members.</p>
+      <p style="text-align: justify;">My performances have been featured in famous medias including China Central Television (CCTV) 新闻联播, China Global Television Network (CGTN, 中国国际电视台), Reference News (新华社参考消息), 人民网, 中国新闻网, 光明网.</p>
+      <p style="text-align: justify;">&#127941 入选2021年度拔尖创新人才培育计划 (<font color='#4a2f91'><b>全校仅20位博士研究生</b></font>)，国家留学基金委公派出国留学奖学金，北京理工大学研究生特等学业奖学金，第十四届中国青年志愿者优秀个人奖，北京理工大学优秀学生宿舍 (<font color='#4a2f91'><b>博士唯一</b></font>)</p>
+      <p style="text-align: justify;">第九届中国国际“互联网+”大学生创新创业大赛北京赛区二等奖 (<font color='#4a2f91'><b>团队队长</b></font>)，2023年度北京市“百强创业团队”并获得申请入驻北京大学生创业园的资格 (<font color='#4a2f91'><b>项目负责人</b></font>)，第十九届中国研究生数学建模竞赛二等奖 (<font color='#4a2f91'><b>Top 2%</b></font>)，中国人工智能学会第十三届中国计算机博弈锦标赛冠军 (<font color='#4a2f91'><b>全胜</b></font>)</p>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>&#128231 Contact</h2>
+      <p><a href="mailto:levizhang99@163.com"><b>levizhang99@163.com</b></a> | <a href="mailto:3120215450@bit.edu.cn"><b>zhangyuntian@bit.edu.cn</b></a> | <a href="https://www.zhihu.com/people/LeviZhang"><b>Zhihu (知乎) Blogs</b></a> | <b>微信公众号: 谈谈天的读博日记</b></p>
+      <p>Please feel free to contact me via email or leave me a message！</p>
+    </section>
+
+    <div style="text-align: center;">
+  	  <a href="https://clustrmaps.com/site/1c7j2" title="Visit tracker">
+		<img src="//clustrmaps.com/map_v2.png?cl=ffffff&w=300&t=tt&d=AOKhSVRfVRN52vZ7fPFOAXneNYBNYt0F-JOOtCb5sVw&co=2d78ad&ct=ffffff" 
+		  style="max-width: 100%; height: auto;" alt="Visitor Map"/>
+  	  </a>
+	</div>
+  </main>
+
+  <footer>
+    &copy; Yun-Tian (Levi) Zhang
+  </footer>
+</body>
+</html>
